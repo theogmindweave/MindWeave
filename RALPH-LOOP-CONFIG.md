@@ -1,290 +1,584 @@
-# MindWeave Ralph Loop Configuration
-## Complete Startup in MD Format - 90 Blocks
+# Ralph Loop Configuration with Memory Context Optimization
 
-> **Session Type:** Investor-Ready Documentation Sprint
-> **Output Format:** Markdown Only (No Code)
-> **Total Blocks:** 90 Documentation Units
-> **Focus:** Equal depth across Product, Business, GTM, Engineering
+**Created:** December 29, 2025
+**Purpose:** Iterative learning framework for MindWeave codebase with persistent memory integration
 
 ---
 
-## RALPH LOOP COMMAND
+## 🎯 Ralph Loop Overview
 
+The Ralph Loop is an iterative learning pattern where Claude progressively understands a codebase by:
+1. **Reading** small chunks of code/documentation
+2. **Understanding** context and patterns
+3. **Remembering** insights via mem-search
+4. **Asking** clarifying questions
+5. **Building** comprehensive understanding
+
+This config integrates **mem-search skill** to cache and retrieve context for optimized learning.
+
+---
+
+## 🔧 Core Configuration
+
+### Ralph Loop Activation Command
 ```
 /ralph-loop
 ```
 
-**Paste this prompt after starting the loop:**
-
+### Memory Search Integration
+Use the **mem-search skill** to search and store context:
 ```
-You are building THE COMPLETE STARTUP DOCUMENTATION for MindWeave - an Enterprise AI Governance platform for Claude + MCP Management.
-
-## YOUR MISSION
-Create 90 documentation blocks in MD format. NO CODE. Only specifications, wireframes (ASCII), business documents, and strategic plans.
-
-## CONTEXT (Read First)
-- Read: TheOGMindWeave/00-foundation/MANIFESTO.md
-- Read: TheOGMindWeave/02-product/PRODUCT-ROADMAP.md
-- Read: TheOGMindWeave/01-research/COMPETITIVE-INTEL.md
-- Read: TheOGMindWeave/01-research/MARKET-ANALYSIS.md
-- Read: TheOGMindWeave/02-product/PRIORITY-MATRIX.md
-
-## THE 90 BLOCKS (Execute in Order)
-
-### PHASE 1: FOUNDATION (Blocks 1-5)
-1. TheOGMindWeave/00-foundation/TEAM.md - Founding team bios, advisors, org chart
-2. TheOGMindWeave/00-foundation/VISION-2030.md - 5-year vision statement
-3. TheOGMindWeave/00-foundation/COMPANY-VALUES.md - Expanded values & culture
-4. TheOGMindWeave/00-foundation/INVESTOR-THESIS.md - Why invest in MindWeave
-5. TheOGMindWeave/00-foundation/MILESTONES.md - Key milestones & timeline
-
-### PHASE 2: RESEARCH COMPLETION (Blocks 6-10)
-6. TheOGMindWeave/01-research/RESEARCH-PAPERS.md - Academic papers bibliography
-7. TheOGMindWeave/01-research/CUSTOMER-INTERVIEWS.md - Interview template + findings
-8. TheOGMindWeave/01-research/TAM-SAM-SOM-DEEP.md - Detailed market sizing
-9. TheOGMindWeave/01-research/TRENDS-ANALYSIS.md - AI governance trends 2025-2030
-10. TheOGMindWeave/01-research/REGULATORY-LANDSCAPE.md - AI regulations by region
-
-### PHASE 3: PRODUCT SPECIFICATIONS (Blocks 11-30)
-
-#### 3A: Core PRD & User Stories (11-15)
-11. TheOGMindWeave/02-product/PRD-MVP.md - Formal PRD for MVP
-12. TheOGMindWeave/02-product/USER-STORIES-ENGINEERING-MANAGER.md - 10 stories
-13. TheOGMindWeave/02-product/USER-STORIES-CISO.md - 10 stories
-14. TheOGMindWeave/02-product/USER-STORIES-DEVELOPER.md - 10 stories
-15. TheOGMindWeave/02-product/USER-STORIES-COMPLIANCE-OFFICER.md - 10 stories
-
-#### 3B: Feature Specifications (16-21)
-16. TheOGMindWeave/02-product/features/FEATURE-TOKEN-DASHBOARD.md - Full spec
-17. TheOGMindWeave/02-product/features/FEATURE-MCP-REGISTRY.md - Full spec
-18. TheOGMindWeave/02-product/features/FEATURE-TEAM-MANAGEMENT.md - Full spec
-19. TheOGMindWeave/02-product/features/FEATURE-AUDIT-LOGS.md - Full spec
-20. TheOGMindWeave/02-product/features/FEATURE-SSO-AUTH.md - Full spec
-21. TheOGMindWeave/02-product/features/FEATURE-HIVEMIND.md - Full spec
-
-#### 3C: UI Wireframes - ASCII Art (22-30)
-22. TheOGMindWeave/02-product/wireframes/WIREFRAME-LOGIN.md - Login flow
-23. TheOGMindWeave/02-product/wireframes/WIREFRAME-DASHBOARD.md - Main dashboard
-24. TheOGMindWeave/02-product/wireframes/WIREFRAME-TOKEN-USAGE.md - Token view
-25. TheOGMindWeave/02-product/wireframes/WIREFRAME-MCP-REGISTRY.md - MCP list
-26. TheOGMindWeave/02-product/wireframes/WIREFRAME-MCP-DETAIL.md - MCP detail
-27. TheOGMindWeave/02-product/wireframes/WIREFRAME-TEAM-MANAGEMENT.md - Teams
-28. TheOGMindWeave/02-product/wireframes/WIREFRAME-AUDIT-LOGS.md - Audit view
-29. TheOGMindWeave/02-product/wireframes/WIREFRAME-SETTINGS.md - Settings
-30. TheOGMindWeave/02-product/wireframes/WIREFRAME-HIVEMIND.md - Hivemind UI
-
-### PHASE 4: UI/UX DESIGN SYSTEM (Blocks 31-40)
-31. TheOGMindWeave/02-product/design/DESIGN-SYSTEM.md - Colors, typography, spacing
-32. TheOGMindWeave/02-product/design/COMPONENT-LIBRARY.md - Button, Input, Card specs
-33. TheOGMindWeave/02-product/design/NAVIGATION-PATTERNS.md - Nav structure
-34. TheOGMindWeave/02-product/design/DATA-VISUALIZATION.md - Chart specs
-35. TheOGMindWeave/02-product/design/ACCESSIBILITY-SPEC.md - WCAG 2.1 requirements
-36. TheOGMindWeave/02-product/design/RESPONSIVE-BREAKPOINTS.md - Mobile/tablet/desktop
-37. TheOGMindWeave/02-product/design/INFORMATION-ARCHITECTURE.md - Sitemap
-38. TheOGMindWeave/02-product/design/USER-FLOWS.md - Critical user journeys
-39. TheOGMindWeave/02-product/design/EMPTY-STATES.md - Zero-data states
-40. TheOGMindWeave/02-product/design/ERROR-STATES.md - Error handling UI
-
-### PHASE 5: BUSINESS MODEL (Blocks 41-50)
-41. TheOGMindWeave/03-business/BUSINESS-MODEL-CANVAS.md - Full canvas
-42. TheOGMindWeave/03-business/REVENUE-MODEL.md - SaaS pricing deep dive
-43. TheOGMindWeave/03-business/PRICING-STRATEGY.md - Tiers, packaging, anchoring
-44. TheOGMindWeave/03-business/UNIT-ECONOMICS.md - CAC, LTV, payback, margins
-45. TheOGMindWeave/03-business/FINANCIAL-MODEL-Y1.md - Year 1 P&L
-46. TheOGMindWeave/03-business/FINANCIAL-MODEL-Y3.md - 3-year projections
-47. TheOGMindWeave/03-business/FUNDING-STRATEGY.md - Seed, Series A plan
-48. TheOGMindWeave/03-business/USE-OF-FUNDS.md - How we'll spend raise
-49. TheOGMindWeave/03-business/KEY-METRICS-DASHBOARD.md - North star metrics
-50. TheOGMindWeave/03-business/RISK-ANALYSIS.md - Risks and mitigations
-
-### PHASE 6: GO-TO-MARKET (Blocks 51-60)
-51. TheOGMindWeave/04-gtm/GTM-STRATEGY.md - Overall go-to-market
-52. TheOGMindWeave/04-gtm/ICP-PERSONAS.md - 4 detailed buyer personas
-53. TheOGMindWeave/04-gtm/CUSTOMER-JOURNEY.md - Awareness to advocacy
-54. TheOGMindWeave/04-gtm/SALES-PLAYBOOK.md - Discovery, demo, close
-55. TheOGMindWeave/04-gtm/OBJECTION-HANDLING.md - Top 15 objections
-56. TheOGMindWeave/04-gtm/MARKETING-PLAN.md - Content, events, partnerships
-57. TheOGMindWeave/04-gtm/CONTENT-CALENDAR.md - 90-day content plan
-58. TheOGMindWeave/04-gtm/CHANNEL-STRATEGY.md - Direct, partner, PLG
-59. TheOGMindWeave/04-gtm/COMPETITIVE-BATTLECARDS.md - Win vs each competitor
-60. TheOGMindWeave/04-gtm/LAUNCH-PLAN.md - MVP launch checklist
-
-### PHASE 7: ENGINEERING ARCHITECTURE (Blocks 61-75)
-61. TheOGMindWeave/05-engineering/TECH-STACK.md - Full stack decisions
-62. TheOGMindWeave/05-engineering/ARCHITECTURE-OVERVIEW.md - System design
-63. TheOGMindWeave/05-engineering/DATA-MODEL.md - Entity relationships
-64. TheOGMindWeave/05-engineering/DATABASE-SCHEMA.md - Table definitions
-65. TheOGMindWeave/05-engineering/API-DESIGN.md - REST/GraphQL decisions
-66. TheOGMindWeave/05-engineering/API-ENDPOINTS.md - All endpoints spec
-67. TheOGMindWeave/05-engineering/AUTHENTICATION-FLOW.md - SSO/SAML flow
-68. TheOGMindWeave/05-engineering/SECURITY-ARCHITECTURE.md - Security design
-69. TheOGMindWeave/05-engineering/INFRASTRUCTURE.md - AWS architecture
-70. TheOGMindWeave/05-engineering/DEPLOYMENT-PIPELINE.md - CI/CD spec
-71. TheOGMindWeave/05-engineering/MONITORING-OBSERVABILITY.md - Logging, metrics
-72. TheOGMindWeave/05-engineering/SCALABILITY-PLAN.md - Scaling strategy
-73. TheOGMindWeave/05-engineering/DISASTER-RECOVERY.md - DR plan
-74. TheOGMindWeave/05-engineering/THIRD-PARTY-INTEGRATIONS.md - Integration specs
-75. TheOGMindWeave/05-engineering/TECHNICAL-DEBT-POLICY.md - Engineering practices
-
-### PHASE 8: OPERATIONS (Blocks 76-82)
-76. TheOGMindWeave/06-operations/ORG-CHART.md - Team structure
-77. TheOGMindWeave/06-operations/HIRING-PLAN.md - Roles, timeline, JDs
-78. TheOGMindWeave/06-operations/ONBOARDING-PLAYBOOK.md - New hire onboarding
-79. TheOGMindWeave/06-operations/PROCESSES.md - Team workflows
-80. TheOGMindWeave/06-operations/METRICS-KPIS.md - OKR framework
-81. TheOGMindWeave/06-operations/VENDOR-MANAGEMENT.md - Key vendors
-82. TheOGMindWeave/06-operations/COMPLIANCE-CHECKLIST.md - SOC2, GDPR prep
-
-### PHASE 9: RESOURCES & APPENDIX (Blocks 83-88)
-83. TheOGMindWeave/07-resources/LINKS.md - All useful links
-84. TheOGMindWeave/07-resources/TOOLS.md - Tools we use
-85. TheOGMindWeave/07-resources/TEMPLATES.md - Reusable templates
-86. TheOGMindWeave/07-resources/GLOSSARY.md - MindWeave terminology
-87. TheOGMindWeave/07-resources/FAQ.md - Internal FAQ
-88. TheOGMindWeave/07-resources/READING-LIST.md - Team reading
-
-### PHASE 10: INVESTOR MATERIALS (Blocks 89-90)
-89. TheOGMindWeave/08-investor/PITCH-DECK-OUTLINE.md - Slide-by-slide outline
-90. TheOGMindWeave/08-investor/ONE-PAGER.md - Executive summary
+/claude-mem:mem-search
+```
 
 ---
 
-## EXECUTION RULES
+## 📚 Ralph Loop Workflow for MindWeave
 
-1. **Create each file completely** - Don't leave TODOs or placeholders
-2. **Use ASCII art for wireframes** - Box characters like ┌─┬─┐
-3. **Include metrics everywhere** - Numbers, targets, benchmarks
-4. **Be specific** - No generic content, MindWeave-specific only
-5. **Cross-reference** - Link between documents
-6. **Investor-ready quality** - Professional, thorough, defensible
+### Phase 1: Strategic Context (Memory-Optimized)
 
-## FILE FORMAT TEMPLATE
+**Goal:** Understand the 7-month execution plan and strategic foundation
 
-Each file should follow this structure:
+**Commands:**
+```bash
+/ralph-loop
+
+# Then in the loop:
+1. Read: EXECUTION-PLAN-2025-7MONTH/00-EXECUTIVE-SUMMARY.md
+2. Search: /claude-mem:mem-search "MindWeave 7-month strategy execution roadmap"
+3. Understand: Key milestones, personas, GTM approach
+4. Remember: Store strategic context via mem-search
+5. Ask: What are the critical path items?
+6. Next: Product roadmap deep dive
+```
+
+### Phase 2: Product Architecture (Context-Cached)
+
+**Goal:** Understand product specifications and design system
+
+**Commands:**
+```bash
+/ralph-loop
+
+# Sequence:
+1. Read: TheOGMindWeave/02-product/PRD-MVP.md
+2. Search: /claude-mem:mem-search "MindWeave MVP features hivemind MCP registry"
+3. Read: TheOGMindWeave/02-product/design/DESIGN-SYSTEM.md
+4. Search: /claude-mem:mem-search "MindWeave design system color typography components"
+5. Remember: Core product patterns
+6. Understand: Feature matrix and interactions
+```
+
+### Phase 3: Engineering Architecture (Optimized Recall)
+
+**Goal:** Deep dive into technical implementation
+
+**Commands:**
+```bash
+/ralph-loop
+
+# Execution:
+1. Read: TheOGMindWeave/05-engineering/SYSTEM-ARCHITECTURE.md
+2. Search: /claude-mem:mem-search "MindWeave system architecture microservices database"
+3. Read: TheOGMindWeave/05-engineering/API-SPECIFICATIONS.md
+4. Search: /claude-mem:mem-search "MindWeave API endpoints authentication authorization"
+5. Connect: How architecture supports product features
+6. Remember: Technical implementation patterns
+```
+
+### Phase 4: Competitive Intelligence (Pattern Recognition)
+
+**Goal:** Analyze competitor positioning and differentiation
+
+**Commands:**
+```bash
+/ralph-loop
+
+# Process:
+1. Read: TheOGMindWeave/01-research/COMPETITIVE-INTEL.md
+2. Search: /claude-mem:mem-search "MindWeave competitor analysis Weave Adadot differentiation"
+3. Browse: TheOGMindWeave/01-research/competitor-docs/REFERENCE-FILES/
+4. Search: /claude-mem:mem-search "competitor messaging positioning features"
+5. Remember: Key competitive advantages
+6. Synthesize: Market position and value proposition
+```
+
+### Phase 5: GTM Strategy (Context-Aware)
+
+**Goal:** Understand market positioning and customer acquisition
+
+**Commands:**
+```bash
+/ralph-loop
+
+# Steps:
+1. Read: TheOGMindWeave/04-gtm/GTM-STRATEGY.md
+2. Search: /claude-mem:mem-search "MindWeave GTM launch strategy sales playbook"
+3. Read: TheOGMindWeave/04-gtm/ICP-PERSONAS.md
+4. Search: /claude-mem:mem-search "MindWeave buyer personas CISO engineering manager"
+5. Review: TheOGMindWeave/04-gtm/CONTENT-CALENDAR.md
+6. Remember: Customer acquisition patterns and content strategy
+```
+
+---
+
+## 🧠 Memory Search Integration Points
+
+### Strategic Memory Searches
+```markdown
+# Use these searches to build cached context:
+
+1. "MindWeave foundation vision team company values"
+   - Accesses: Company fundamentals and culture
+
+2. "MindWeave 7-month execution plan roadmap timeline"
+   - Accesses: Monthly milestones and critical path
+
+3. "MindWeave product features specifications design"
+   - Accesses: Complete product blueprint
+
+4. "MindWeave engineering architecture microservices"
+   - Accesses: Technical implementation details
+
+5. "MindWeave competitive intelligence market positioning"
+   - Accesses: Competitive differentiation
+
+6. "MindWeave GTM sales strategy content marketing"
+   - Accesses: Customer acquisition framework
+
+7. "MindWeave business model financials funding"
+   - Accesses: Business viability and metrics
+```
+
+### Contextual Memory Retrieval
+After storing context, search by:
+- **Project Name:** Always prefix with "MindWeave"
+- **Date:** Include YYYY-MM-DD for temporal search
+- **Intent:** "implementing", "architecting", "analyzing", "designing"
+- **Domain:** "product", "engineering", "gtm", "research"
+
+**Example Search:**
+```bash
+/claude-mem:mem-search "MindWeave product 2025-12-29 feature specifications design system"
+```
+
+---
+
+## 🔄 Ralph Loop Iteration Pattern
+
+### Each Ralph Loop Cycle:
+
+```
+┌─────────────────────────────────────────┐
+│  1. READ                                 │
+│  ↓ (chunk of documentation)             │
+├─────────────────────────────────────────┤
+│  2. SEARCH                               │
+│  ↓ (/claude-mem:mem-search)             │
+├─────────────────────────────────────────┤
+│  3. UNDERSTAND                           │
+│  ↓ (synthesize and connect)             │
+├─────────────────────────────────────────┤
+│  4. REMEMBER                             │
+│  ↓ (store in memory via mem-search)     │
+├─────────────────────────────────────────┤
+│  5. ASK                                  │
+│  ↓ (clarifying questions)               │
+├─────────────────────────────────────────┤
+│  6. LOOP                                 │
+│  ↓ (continue with next chunk)           │
+└─────────────────────────────────────────┘
+```
+
+### Template for Each Iteration:
+
+```
+/ralph-loop
+
+📖 **READING** [FILE NAME]
+- Key sections identified
+- Important concepts flagged
+
+🔍 **SEARCHING**
+/claude-mem:mem-search "[context query]"
+- Previous related memories found
+- Context connected
+
+💡 **UNDERSTANDING**
+- Pattern recognition
+- Connection to existing knowledge
+- New insights identified
+
+💾 **REMEMBERING**
+- Insights logged
+- Context cached
+- Patterns recognized
+
+❓ **ASKING**
+- Clarification needed
+- Edge cases identified
+- Next exploration direction
+
+➡️ **LOOP**
+- Next file/section
+- Related documents
+- Deeper dives needed
+```
+
+---
+
+## 🎯 Search Queries by Context Domain
+
+### Product Understanding
+```
+"MindWeave MVP features requirements specifications"
+"MindWeave design system components accessibility"
+"MindWeave wireframes user interface layouts"
+"MindWeave user stories personas use cases"
+```
+
+### Architecture Understanding
+```
+"MindWeave system architecture components layers"
+"MindWeave database schema data models"
+"MindWeave API endpoints request response"
+"MindWeave authentication authorization security"
+"MindWeave microservices deployment infrastructure"
+```
+
+### Market Understanding
+```
+"MindWeave competitive analysis differentiation"
+"MindWeave market research TAM SAM SOM"
+"MindWeave customer personas buyer profile"
+"MindWeave sales pitch value proposition"
+```
+
+### Execution Understanding
+```
+"MindWeave 7-month roadmap timeline milestones"
+"MindWeave product launch sequence phases"
+"MindWeave engineering tasks implementation"
+"MindWeave GTM content strategy calendar"
+```
+
+### Decision Context
+```
+"MindWeave strategic decisions rationale"
+"MindWeave product positioning messaging"
+"MindWeave technology choices architecture"
+"MindWeave go-to-market entry strategy"
+```
+
+---
+
+## 📋 Ralph Loop Session Template
+
+### Starting a New Ralph Loop Session:
 
 ```markdown
-# [Title]
+# Ralph Loop Session: [TOPIC]
+**Date:** [DATE]
+**Focus Area:** [STRATEGIC/PRODUCT/ENGINEERING/GTM/RESEARCH]
+**Goal:** [WHAT YOU WANT TO UNDERSTAND]
 
-> [One-line summary]
+## Phase 1: Initial Context
+/ralph-loop
 
----
+### Memory Check
+/claude-mem:mem-search "[relevant search]"
 
-## Overview
-[2-3 paragraph introduction]
+### Entry Point
+Read: [PRIMARY FILE]
+Search: [RELATED CONTEXT]
+Understand: [KEY CONCEPTS]
 
-## [Main Sections]
-[Detailed content with tables, diagrams, specs]
+## Phase 2: Deep Dive
+Read: [SECONDARY FILES]
+Search: [CONNECTED PATTERNS]
+Synthesize: [RELATIONSHIPS]
 
-## Key Decisions
-[Decisions made and rationale]
-
-## Open Questions
-[Things that need founder input]
-
-## Related Documents
-- Link to related docs
-
----
-
-*Last Updated: [Date]*
-*Owner: [Role]*
-```
-
-## PROGRESS TRACKING
-
-After each block:
-- Announce: "Block [X]/90 complete: [filename]"
-- Summarize: Key content created
-- Continue to next block without stopping
-
-## STOP CONDITION
-
-Complete all 90 blocks. Do not stop until block 90 is done.
-```
+## Phase 3: Synthesis
+Ask: [CLARIFYING QUESTIONS]
+Remember: [KEY INSIGHTS]
+Next: [FOLLOW-UP AREAS]
 
 ---
 
-## QUICK START
+## Findings Log
+- Finding 1: [INSIGHT]
+- Finding 2: [PATTERN]
+- Finding 3: [CONNECTION]
 
-1. Start Claude Code session in MindWeave directory
-2. Run `/ralph-loop`
-3. Paste the prompt above
-4. Let it run through all 90 blocks
-
----
-
-## EXPECTED OUTPUT
-
-After completion:
-- 90 new MD files in TheOGMindWeave folder
-- Complete startup documentation
-- Investor-ready materials
-- UI wireframes in ASCII
-- Full engineering specs (no code)
-- Business model with financials
-
----
-
-## FOLDER STRUCTURE (Created by Loop)
-
-```
-TheOGMindWeave/
-├── 00-foundation/
-│   ├── MANIFESTO.md (exists)
-│   ├── NAMING-SYSTEM.md (exists)
-│   ├── TEAM.md (new)
-│   ├── VISION-2030.md (new)
-│   ├── COMPANY-VALUES.md (new)
-│   ├── INVESTOR-THESIS.md (new)
-│   └── MILESTONES.md (new)
-│
-├── 01-research/
-│   ├── (existing files)
-│   ├── RESEARCH-PAPERS.md (new)
-│   ├── CUSTOMER-INTERVIEWS.md (new)
-│   ├── TAM-SAM-SOM-DEEP.md (new)
-│   ├── TRENDS-ANALYSIS.md (new)
-│   └── REGULATORY-LANDSCAPE.md (new)
-│
-├── 02-product/
-│   ├── (existing files)
-│   ├── PRD-MVP.md (new)
-│   ├── USER-STORIES-*.md (4 new files)
-│   ├── features/
-│   │   └── FEATURE-*.md (6 new files)
-│   ├── wireframes/
-│   │   └── WIREFRAME-*.md (9 new files)
-│   └── design/
-│       └── *.md (10 new files)
-│
-├── 03-business/
-│   └── *.md (10 new files)
-│
-├── 04-gtm/
-│   └── *.md (10 new files)
-│
-├── 05-engineering/
-│   └── *.md (15 new files)
-│
-├── 06-operations/
-│   └── *.md (7 new files)
-│
-├── 07-resources/
-│   └── *.md (6 new files)
-│
-└── 08-investor/
-    └── *.md (2 new files)
+## Context Cached
+- Memory ID: [ID]
+- Query: [SEARCH USED]
+- Summary: [WHAT WAS REMEMBERED]
 ```
 
 ---
 
-## ESTIMATED TOKENS
+## 🚀 Optimized Ralph Loop Patterns
 
-- Per block: ~2,000-4,000 tokens
-- Total: ~270,000-360,000 tokens
-- Time: ~2-3 hours continuous
+### Pattern 1: Feature Deep Dive
+```
+/ralph-loop
+
+1. Read feature spec (PRD or FEATURE-*.md)
+2. Search: "MindWeave [FEATURE NAME] specification design"
+3. Read wireframes for that feature
+4. Search: "MindWeave [FEATURE NAME] wireframe UI layout"
+5. Read engineering docs for implementation
+6. Search: "MindWeave [FEATURE NAME] architecture implementation"
+7. Synthesize: Feature complete understanding
+```
+
+### Pattern 2: User Journey Mapping
+```
+/ralph-loop
+
+1. Read user persona (USER-STORIES-*.md)
+2. Search: "MindWeave [PERSONA TYPE] use case journey"
+3. Read relevant feature specs
+4. Search: "MindWeave features addressing [PERSONA] needs"
+5. Read GTM materials for acquisition
+6. Search: "MindWeave [PERSONA] GTM sales strategy"
+7. Map complete user journey end-to-end
+```
+
+### Pattern 3: Architecture Understanding
+```
+/ralph-loop
+
+1. Read system architecture
+2. Search: "MindWeave architecture components layers"
+3. Read microservices design
+4. Search: "MindWeave microservices service mesh"
+5. Read API specs
+6. Search: "MindWeave API endpoints contracts"
+7. Read security architecture
+8. Search: "MindWeave security authentication authorization"
+9. Understand complete technical implementation
+```
+
+### Pattern 4: Market Competitive Analysis
+```
+/ralph-loop
+
+1. Read market analysis
+2. Search: "MindWeave market TAM SAM research"
+3. Read competitive intelligence
+4. Search: "MindWeave competitors differentiation comparison"
+5. Browse competitor docs
+6. Search: "MindWeave competitive advantages messaging"
+7. Read GTM strategy
+8. Search: "MindWeave positioning value proposition"
+9. Complete competitive landscape understanding
+```
 
 ---
 
-*Created: 2025-12-29*
-*For: MindWeave Startup Documentation Sprint*
+## 💡 Memory Optimization Tips
+
+### Do's ✅
+- ✅ Search before reading to understand context
+- ✅ Use specific project names (e.g., "MindWeave")
+- ✅ Include dates for temporal relevance (YYYY-MM-DD)
+- ✅ Search with intent (implementing, designing, analyzing)
+- ✅ Save findings to memory after each phase
+- ✅ Reuse cached context from previous sessions
+- ✅ Build memory incrementally across sessions
+
+### Don'ts ❌
+- ❌ Skip searching for existing context
+- ❌ Re-read same documents without memory check
+- ❌ Use vague search queries
+- ❌ Ignore previous insights and patterns
+- ❌ Start fresh without checking memory
+- ❌ Forget to log findings to memory
+- ❌ Treat each session as independent
+
+---
+
+## 🎓 Ralph Loop Learning Tracks
+
+### Track 1: Complete Founder Overview (2-3 sessions)
+```
+Session 1: Strategy & Vision
+- EXECUTION-PLAN-2025-7MONTH/00-EXECUTIVE-SUMMARY.md
+- TheOGMindWeave/00-foundation/
+- TheOGMindWeave/03-business/
+
+Session 2: Product & Design
+- TheOGMindWeave/02-product/PRD-MVP.md
+- TheOGMindWeave/02-product/design/
+- TheOGMindWeave/02-product/features/
+
+Session 3: GTM & Execution
+- TheOGMindWeave/04-gtm/GTM-STRATEGY.md
+- EXECUTION-PLAN-2025-7MONTH/02-MONTHLY-EXECUTION-TIMELINE.md
+- EXECUTION-PLAN-2025-7MONTH/03-PRODUCT-ROADMAP.md
+```
+
+### Track 2: Engineering Deep Dive (2-3 sessions)
+```
+Session 1: Architecture
+- TheOGMindWeave/05-engineering/SYSTEM-ARCHITECTURE.md
+- TheOGMindWeave/05-engineering/MICROSERVICES-DESIGN.md
+- TheOGMindWeave/05-engineering/DATABASE-SCHEMA.md
+
+Session 2: API & Integration
+- TheOGMindWeave/05-engineering/API-SPECIFICATIONS.md
+- TheOGMindWeave/05-engineering/AUTHENTICATION-AUTHORIZATION.md
+- TheOGMindWeave/05-engineering/SECURITY-ARCHITECTURE.md
+
+Session 3: Operations
+- TheOGMindWeave/05-engineering/DEVOPS-CICD.md
+- TheOGMindWeave/05-engineering/MONITORING-OBSERVABILITY.md
+- TheOGMindWeave/05-engineering/DEPLOYMENT-STRATEGY.md
+```
+
+### Track 3: Product Manager Path (2-3 sessions)
+```
+Session 1: Product Vision
+- TheOGMindWeave/02-product/PRD-MVP.md
+- TheOGMindWeave/02-product/PRODUCT-ROADMAP.md
+- TheOGMindWeave/02-product/PRIORITY-MATRIX.md
+
+Session 2: User Understanding
+- TheOGMindWeave/02-product/USER-STORIES-*.md (all 4)
+- TheOGMindWeave/04-gtm/ICP-PERSONAS.md
+- TheOGMindWeave/02-product/80-20-ANALYSIS.md
+
+Session 3: Design System
+- TheOGMindWeave/02-product/design/ (all files)
+- TheOGMindWeave/02-product/wireframes/ (all files)
+```
+
+### Track 4: GTM & Sales Path (2-3 sessions)
+```
+Session 1: Strategy
+- TheOGMindWeave/04-gtm/GTM-STRATEGY.md
+- TheOGMindWeave/04-gtm/LAUNCH-PLAN.md
+- TheOGMindWeave/04-gtm/ICP-PERSONAS.md
+
+Session 2: Sales & Marketing
+- TheOGMindWeave/04-gtm/SALES-PLAYBOOK.md
+- TheOGMindWeave/04-gtm/MARKETING-PLAN.md
+- TheOGMindWeave/04-gtm/CONTENT-CALENDAR.md
+
+Session 3: Competitive Positioning
+- TheOGMindWeave/01-research/COMPETITIVE-INTEL.md
+- TheOGMindWeave/04-gtm/COMPETITIVE-BATTLECARDS.md
+- TheOGMindWeave/01-research/competitor-docs/REFERENCE-FILES/
+```
+
+---
+
+## 🔍 Memory Search Command Reference
+
+### Quick Search Format:
+```bash
+/claude-mem:mem-search "[PROJECT] [DOMAIN] [INTENT] [SPECIFICS]"
+```
+
+### Examples:
+
+**Strategic Context:**
+```bash
+/claude-mem:mem-search "MindWeave strategic foundation vision execution plan"
+```
+
+**Product Context:**
+```bash
+/claude-mem:mem-search "MindWeave product features MVP specification design"
+```
+
+**Engineering Context:**
+```bash
+/claude-mem:mem-search "MindWeave architecture system design implementation"
+```
+
+**Market Context:**
+```bash
+/claude-mem:mem-search "MindWeave competitive analysis market positioning"
+```
+
+**Execution Context:**
+```bash
+/claude-mem:mem-search "MindWeave 7-month roadmap timeline milestones"
+```
+
+**Specific Feature:**
+```bash
+/claude-mem:mem-search "MindWeave [FEATURE_NAME] specification requirements"
+```
+
+---
+
+## 📊 Ralph Loop Effectiveness Metrics
+
+### Track Your Learning:
+- **Depth:** Number of files connected in single loop session
+- **Breadth:** Number of domains covered (product, engineering, gtm, etc.)
+- **Retention:** Ability to recall insights across sessions
+- **Synthesis:** Quality of connections between different domains
+- **Memory Hits:** Number of times cached context was reused effectively
+
+### Optimize Your Loops:
+- Session 1: ~5 files, 1-2 domains (foundation)
+- Session 2: ~8 files, 2-3 domains (expanded)
+- Session 3: ~12 files, 3-4 domains (comprehensive)
+- Session 4+: Cross-domain synthesis and pattern recognition
+
+---
+
+## 🚀 Quick Start Guide
+
+### To Start Your First Ralph Loop:
+```bash
+/ralph-loop
+
+# Step 1: Search for existing context
+/claude-mem:mem-search "MindWeave executive summary strategy"
+
+# Step 2: Read the core document
+EXECUTION-PLAN-2025-7MONTH/00-EXECUTIVE-SUMMARY.md
+
+# Step 3: Search related documents
+/claude-mem:mem-search "MindWeave 7-month roadmap product execution"
+
+# Step 4: Read product docs
+TheOGMindWeave/02-product/PRD-MVP.md
+
+# Step 5: Continue looping...
+```
+
+### To Resume Learning Later:
+```bash
+# Search what you've already learned
+/claude-mem:mem-search "MindWeave [PREVIOUS TOPIC]"
+
+# Continue from where you left off
+TheOGMindWeave/[NEXT DOCUMENT]
+
+# Or start a new domain
+/ralph-loop
+```
+
+---
+
+## 📝 Notes
+
+- **Optimal Loop Duration:** 15-30 minutes per session for best retention
+- **Memory Integration:** Check memory BEFORE reading new content
+- **Synthesis:** Spend last 5 min of each session synthesizing learnings
+- **Cross-Domain:** Connect insights across product, engineering, GTM
+- **Reuse:** Always leverage cached memory from previous sessions
+- **Document:** Keep a session log of key insights and memory IDs
+
+---
+
+**Last Updated:** December 29, 2025
+**Status:** Ready for Active Ralph Loops
+**Next Action:** Start Phase 1 (Strategic Context) Ralph Loop Session

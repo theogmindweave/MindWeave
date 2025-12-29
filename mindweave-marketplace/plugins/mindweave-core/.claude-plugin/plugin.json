@@ -1,0 +1,19 @@
+{
+  "name": "mindweave-core",
+  "version": "0.1.0",
+  "description": "MindWeave Enterprise AI Usage Intelligence - Core plugin for APIR scoring, usage analytics, and team intelligence",
+  "author": {
+    "name": "Jiva Underworld ODI",
+    "email": "mindweave@jivaunderworld.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mindweave",
+    "apir",
+    "analytics",
+    "enterprise",
+    "ai-usage",
+    "team-intelligence"
+  ],
+  "category": "enterprise-analytics"
+}

@@ -1,0 +1,190 @@
+{
+  "name": "mindweave-marketplace",
+  "owner": {
+    "name": "Jiva Underworld ODI - MindWeave",
+    "email": "mindweave@jivaunderworld.com"
+  },
+  "metadata": {
+    "description": "Enterprise AI Usage Intelligence Platform - Claude Code plugins for APIR scoring, usage analytics, team intelligence, and code health monitoring",
+    "version": "0.1.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "mindweave-core",
+      "source": "./plugins/mindweave-core",
+      "description": "MindWeave Enterprise AI Usage Intelligence - Core plugin for APIR scoring, usage analytics, and team intelligence",
+      "version": "0.1.0",
+      "author": {
+        "name": "Jiva Underworld ODI"
+      },
+      "category": "enterprise-analytics",
+      "keywords": ["mindweave", "apir", "analytics", "enterprise", "ai-usage"]
+    },
+    {
+      "name": "ralph-wiggum",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/ralph-wiggum"
+      },
+      "description": "Ralph Wiggum iterative development loops - continuous self-referential AI loops for interactive development until task completion",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daisy Hollman (Anthropic)"
+      },
+      "category": "development-automation",
+      "keywords": ["iteration", "automation", "loop", "development", "ralph"]
+    },
+    {
+      "name": "hookify",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/hookify"
+      },
+      "description": "User-configurable hooks from .local.md files - create custom PreToolUse, PostToolUse, and Stop hooks via YAML configuration",
+      "version": "0.1.0",
+      "author": {
+        "name": "Anthropic"
+      },
+      "category": "workflow-automation",
+      "keywords": ["hooks", "automation", "configuration", "workflow"]
+    },
+    {
+      "name": "plugin-dev",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/plugin-dev"
+      },
+      "description": "Plugin development toolkit - scaffold, validate, and build Claude Code plugins with specialized agents and skills",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anthropic"
+      },
+      "category": "developer-tools",
+      "keywords": ["plugins", "development", "scaffold", "validation"]
+    },
+    {
+      "name": "feature-dev",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/feature-dev"
+      },
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+      "version": "1.0.0",
+      "author": {
+        "name": "Sid Bidasaria (Anthropic)"
+      },
+      "category": "development",
+      "keywords": ["features", "architecture", "code-review", "exploration"]
+    },
+    {
+      "name": "frontend-design",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/frontend-design"
+      },
+      "description": "Frontend design skill for UI/UX implementation - create distinctive, production-grade frontend interfaces",
+      "version": "1.0.0",
+      "author": {
+        "name": "Prithvi Rajasekaran, Alexander Bricken (Anthropic)"
+      },
+      "category": "frontend",
+      "keywords": ["frontend", "ui", "ux", "design", "components"]
+    },
+    {
+      "name": "security-guidance",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/security-guidance"
+      },
+      "description": "Security reminder hook - warns about potential security issues including command injection, XSS, and unsafe code patterns",
+      "version": "1.0.0",
+      "author": {
+        "name": "David Dworken (Anthropic)"
+      },
+      "category": "security",
+      "keywords": ["security", "xss", "injection", "owasp", "vulnerabilities"]
+    },
+    {
+      "name": "code-review",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/code-review"
+      },
+      "description": "Automated code review plugin for analyzing code quality, identifying issues, and suggesting improvements",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anthropic"
+      },
+      "category": "code-quality",
+      "keywords": ["review", "quality", "analysis", "suggestions"]
+    },
+    {
+      "name": "pr-review-toolkit",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/pr-review-toolkit"
+      },
+      "description": "Pull request review toolkit for comprehensive PR analysis and feedback",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anthropic"
+      },
+      "category": "code-quality",
+      "keywords": ["pull-request", "review", "github", "code-quality"]
+    },
+    {
+      "name": "commit-commands",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code",
+        "path": "plugins/commit-commands"
+      },
+      "description": "Streamline git workflow with simple commands for committing, pushing, and creating pull requests",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anthropic"
+      },
+      "category": "git",
+      "keywords": ["git", "commit", "push", "pr", "workflow"]
+    },
+    {
+      "name": "specforge",
+      "source": {
+        "source": "github",
+        "repo": "claude-market/marketplace",
+        "path": "specforge"
+      },
+      "description": "Schema-first development ecosystem with dual-spec workflows (OpenAPI + DB schema) for building production-ready applications",
+      "version": "0.1.2",
+      "author": {
+        "name": "Daniel Emod Kovacs"
+      },
+      "category": "development",
+      "keywords": ["openapi", "schema-first", "code-generation", "api-development"]
+    },
+    {
+      "name": "plugin-builder",
+      "source": {
+        "source": "github",
+        "repo": "claude-market/marketplace",
+        "path": "plugin-builder"
+      },
+      "description": "Interactive plugin builder for Claude Code - scaffold, validate, and publish plugins through guided prompts",
+      "version": "1.3.2",
+      "author": {
+        "name": "Daniel Kovacs"
+      },
+      "category": "developer-tools",
+      "keywords": ["plugin", "builder", "scaffolding", "development"]
+    }
+  ]
+}

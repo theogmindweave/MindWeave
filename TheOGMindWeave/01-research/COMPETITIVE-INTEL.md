@@ -329,9 +329,66 @@
 
 ---
 
+### **9. Weave (WorkWeave.dev)** ⭐⭐⭐ AI USAGE ANALYTICS - HIGHEST THREAT
+
+**Market Position:** Leading AI engineering analytics platform, Y Combinator backed
+
+**Company Details:**
+- Founded: 2024, San Francisco
+- Funding: $500K (Burst Capital, Moonfire, Pioneer Fund, YC)
+- Users: 10,000+ engineers
+- Certification: SOC 2 Type II
+
+**What They Do:**
+- AI tool usage tracking across ALL major platforms (GitHub Copilot, Windsurf, Cursor, Devin, Claude Code, Greptile, Code Rabbit)
+- PR-level code attribution (AI-generated vs human-written)
+- Weave Score: ML-powered engineering output metric (0.94 accuracy)
+- Financial ROI calculation with wage data
+- Code review quality scoring
+
+**Strengths:**
+✅ **Already tracking Claude Code**
+✅ Y Combinator backing
+✅ 10K+ active users
+✅ SOC 2 Type II certified
+✅ Financial ROI focus (appeals to CFOs)
+✅ Multi-tool support (not just Claude)
+✅ Beautiful dashboards and UX
+
+**Weaknesses:**
+❌ **Analytics only** (read-only, no governance controls)
+❌ No MCP management
+❌ No team-based permissions
+❌ No compliance reporting (GDPR, HIPAA)
+❌ No proactive skill tracking
+❌ No hivemind discovery
+
+**MindWeave Advantage:**
+- **Governance layer:** Weave = measure, MindWeave = control + comply
+- **MCP management:** Weave doesn't address Model Context Protocol at all
+- **Team permissions:** Weave = org-wide analytics, MindWeave = per-team access control
+- **Compliance focus:** MindWeave = audit trails, policy enforcement, RBAC
+- **Proactive features:** Hivemind discovery, skill suggestions
+
+**Competitive Threat:** 🔴 **CRITICAL** (most direct competitor)
+
+**Pricing:**
+- Free: Up to 10 engineers, 1 repository
+- Premium: $50/month
+- Enterprise: Custom
+
+**Strategy:** Do NOT compete on analytics alone. Position MindWeave as the **governance and compliance layer** that works alongside or instead of analytics tools. Weave measures; MindWeave enables control.
+
+**Differentiation Messaging:**
+- "Weave tells you what happened. MindWeave controls what can happen."
+- "From AI analytics to AI governance"
+- "Measure and manage - not just measure"
+
+---
+
 ## PART 4: EMERGING COMPETITORS (MCP Management)
 
-### **9. MintMCP** ⭐ NEW ENTRANT (Oct 2025)
+### **10. MintMCP** ⭐ NEW ENTRANT (Oct 2025)
 
 **Market Position:** First dedicated MCP management platform
 

@@ -34,3 +34,7 @@ coverage/
 
 # Open source repos (cloned for reference, not tracked)
 open-source/
+reference-repos/
+
+# Research clones (scraped sites, not tracked)
+*-clone/
